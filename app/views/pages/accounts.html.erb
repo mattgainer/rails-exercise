@@ -1,0 +1,26 @@
+<% @accounts.each do |account| %>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <table class="table table-bordered table-hover">
+        <caption>AVAILABLE ACCOUNT INFORMATION</caption>
+        <tr>
+          <th>First Name</th>
+          <td><%= account["first_name"] %></td>
+        </tr>
+        <tr>
+          <th>Last Name</th>
+          <td><%= account["last_name"] %></td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td><a href="mailto:<%= account["email"] %>"><%= account["email"] %></a></td>
+        </tr>
+        <tr>
+          <th>Account Number</th>
+          <td><%= account["account_number"] %></td>
+        </tr>
+      </table><br>
+    </div>
+  </div>
+<% end %>
